@@ -1,0 +1,25 @@
+.gradientBackground {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #2E0EC7, #8B6AE6, #190528);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+
+    background-attachment: fixed;
+
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
