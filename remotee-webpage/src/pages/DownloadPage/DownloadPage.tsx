@@ -3,8 +3,8 @@ import React from "react"
 import { detectOS } from "../../utils/detectOS";
 import { DownloadLinks } from "../../utils/downloadLinks";
 
-import DownloadButton from "../../components/DownloadButton/DownloadButton";
-import DownloadText from "../../components/DownloadText/DownloadText";
+import DownloadButton from "../../components/DownloadComponents/DownloadButton/DownloadButton";
+import DownloadText from "../../components/DownloadComponents/DownloadText/DownloadText";
 
 import styles from '../DownloadPage/DownloadPage.module.scss'
 
