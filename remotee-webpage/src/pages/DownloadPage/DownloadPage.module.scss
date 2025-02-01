@@ -1,15 +1,14 @@
-.download-page {
-    text-align: center;
-    padding: 20px;
-    background-color: #4e1b1b;
-    border-radius: 8px;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    color: azure;
   }
+
   
-  h1 {
-    font-size: 2rem;
-    color: #333;
-  }
+
   
-  .button-container {
-    margin-top: 20px;
-  }

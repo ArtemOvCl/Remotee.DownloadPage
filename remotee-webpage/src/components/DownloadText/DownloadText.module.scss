@@ -1,0 +1,67 @@
+@use "sass:color";
+
+.textContainer {
+  text-align: center;
+  margin-top: -130px;
+
+  h1 {
+    font-weight: normal;
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+
+    span {
+      display: inline-block;
+    }
+
+    span:nth-child(4) {
+      margin: 0 10px;
+
+      background: linear-gradient(
+        45deg,
+        #9bf0da 0%,
+        color.adjust(#d997ea, $lightness: 10%) 50%,
+        color.adjust(#5f10b3, $lightness: -10%) 100%
+      );
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      animation: glow 1.5s ease-in-out infinite alternate,
+                 gradientShift 4s ease infinite;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #c999d5, 0 0 20px #c999d5;
+      }
+      to {
+        text-shadow: 0 0 20px #c999d5, 0 0 30px #c999d5;
+      }
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+
+  p {
+    font-weight: 100;
+    font-size: 17px;
+    margin-top: 0;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.4rem;
+    }
+  }
+}
