@@ -18,9 +18,9 @@
 
       background: linear-gradient(
         45deg,
-        #9bf0da 0%,
-        color.adjust(#AB95E0, $lightness: 10%) 50%,
-        color.adjust(#5f10b3, $lightness: -10%) 100%
+        #85f6d8 0%,
+        color.adjust(azure, $lightness: 10%) 50%,
+        color.adjust(#9960d6, $lightness: -10%) 100%
       );
       background-size: 200% 200%;
       -webkit-background-clip: text;

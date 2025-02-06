@@ -30,7 +30,7 @@
     border: none;
     text-decoration: none;
     border-radius: 20px;
-    padding-left: 30px;
+    padding-left: 40px;
     cursor: pointer;
 
     img {
@@ -43,7 +43,7 @@
       content: "";
       position: absolute;
       inset: -2px;
-      background: conic-gradient(from var(--angle), #efe5ed var(--percentage), #AB95E0, #AB95E0, #efe5ed);
+      background: conic-gradient(from var(--angle), azure var(--percentage), #AB95E0, #AB95E0, azure);
       border-radius: 20px; 
       z-index: -1;
     }
