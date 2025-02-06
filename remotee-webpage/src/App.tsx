@@ -1,14 +1,17 @@
-import DownloadPage from './pages/DownloadPage/DownloadPage'
-
-import './App.css'
+import { useEffect, useState } from "react";
+import DownloadPage from "./pages/DownloadPage/DownloadPage";
+import MobileRedirect from "./components/MobileRedirecting/MobileRedirect";
+import { isMobileDevice } from "./utils/isMobileDevice";
+import "./App.css";
 
 function App() {
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
-  return (
-    <>
-      <DownloadPage/>
-    </>
-  )
+  useEffect(() => {
+    setIsMobile(isMobileDevice());
+  }, []);
+
+  return isMobile ? <MobileRedirect /> : <DownloadPage />;
 }
 
-export default App 
+export default App;

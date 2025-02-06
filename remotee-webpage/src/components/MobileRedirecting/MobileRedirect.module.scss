@@ -1,0 +1,35 @@
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px #6321f3; }
+    50% { box-shadow: 0 0 20px #6321f3; }
+    100% { box-shadow: 0 0 5px #6321f3; }
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .text {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(99, 33, 243, 0.2);
+    border-top: 5px solid #6321f3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite, glow 1.5s ease-in-out infinite alternate;
+  }
+  

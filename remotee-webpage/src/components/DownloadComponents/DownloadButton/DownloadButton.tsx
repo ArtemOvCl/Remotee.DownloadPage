@@ -3,12 +3,24 @@ import styles from './DownloadButton.module.scss';
 import { DownloadButtonProps } from './DownloadButtonProps';
 
 const DownloadButton: React.FC<DownloadButtonProps> = ({ label, fileLink, iconLink }) => {
+  
+  const handleDownload = () => {
+    const link = document.createElement('a');
+
+    link.href = fileLink;
+    link.download = fileLink.split('/').pop() || 'download';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className={styles.buttonContainer}>
-      <a href={fileLink} download className={styles.button}>
-        {iconLink && <img src={iconLink} alt="icon" className={styles.icon} />}
+      <button onClick={handleDownload}>
+        {iconLink && <img src={iconLink} alt={`${label} icon`} className={styles.icon} />}
         <span>{label}</span>
-      </a>
+      </button>
     </div>
   );
 };
